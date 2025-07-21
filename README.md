@@ -53,29 +53,3 @@
 | `()`        | Grouping: Combine multiple commands or pipelines into a single unit.    |
 | `<`, `>`, `>>`, `<<` | Redirection: Input from file, overwrite or append output, heredoc input. |
 
----
-
-## Installation & Usage
-
-Compile the project with:
-
-```bash
-gcc -o b47 main.c parser.c process.c variable.c executor.c expand.c builtins.c -lreadline
-```
-
-Run your new shell:
-
-```bash
-./b47
-```
-
-Examples of badass commands to try:
-
-```bash
-(ls -l | grep ".c") && echo "C files found!" > output.log &
-export PATH=$PATH:/custom/bin
-jobs
-fg %1
-```
-
----
