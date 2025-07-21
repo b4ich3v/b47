@@ -102,4 +102,3 @@ fg %1
 - **Logical AND (`&&`)** runs `echo` only if the pipeline succeeds.
 - **Redirection (`>`)** writes output to `output.txt`.
 - **Background Execution (`&`)** detaches the command, freeing the terminal immediately.
-
