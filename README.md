@@ -2,7 +2,7 @@
 
 ## Description
 
-**b47** is a rock-solid, minimalistic Unix shell designed for power users who want both flexibility and control. It parses and executes complex command lines with surgical precision, supporting advanced shell features usually found only in mature shells:
+**b47** is a high-performance, minimalist Unix shell engineered for advanced users demanding granular command-line control and extensibility. It features a sophisticated parsing engine capable of constructing and interpreting complex syntactic structures, including nested pipelines, conditional execution flows, and comprehensive I/O redirection semantics. Designed with modularity and robustness in mind, b47 implements a rich subset of POSIX-compliant shell behaviors, ensuring precise command evaluation and rigorous process management typically reserved for industrial-grade shell environments:
 
 - **Robust Command Parsing:** Supports pipelines (`|`), command grouping (`()`), logical operators (`&&`, `||`), sequential execution (`;`), and background processes (`&`).
 - **Masterful Redirection Handling:** Fully implements input/output redirections (`<`, `>`, `>>`) and heredocs (`<<`), letting you manipulate data streams like a pro.
