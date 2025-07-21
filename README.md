@@ -79,26 +79,3 @@ fg %1
 ```
 
 ---
-
-## Features that Make b47 a Beast
-
-- **Precision Variable Handling:** Define and export variables that persist across the shell and subprocesses.
-- **Comprehensive Job Control:** Spawn and manage foreground and background jobs with real-time status updates.
-- **Powerful Heredoc Support:** Multiline input blocks (`<<`) for scripting complex commands.
-- **Signal Mastery:** Ignores unwanted interrupts on the shell itself but handles child process signals cleanly.
-- **Readline Integration:** Smart command line editing and history for lightning-fast interaction.
-- **Expandable Architecture:** Modular components make it easy to extend with new features.
-
----
-
-## Example Complex Command Breakdown
-
-```
-(cat file.txt | grep hello) && echo "Found" > output.txt &
-```
-
-- **Grouping** with `()` runs the pipeline as a unit.
-- **Pipeline** connects `cat` output to `grep`.
-- **Logical AND (`&&`)** runs `echo` only if the pipeline succeeds.
-- **Redirection (`>`)** writes output to `output.txt`.
-- **Background Execution (`&`)** detaches the command, freeing the terminal immediately.
