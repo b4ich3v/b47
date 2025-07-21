@@ -3,15 +3,6 @@
 
 #include <stdbool.h>
 
-typedef struct var 
-{
-
-    char* name;
-    char* value;
-    bool exported;   
-
-} var_t;
-
 typedef struct var_entry 
 {
 
