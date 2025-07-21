@@ -1,5 +1,6 @@
 #define _GNU_SOURCE
 #define MAX_EXPAND_DEPTH 256
+
 #include <ctype.h>
 #include <readline/history.h>
 #include <stdbool.h>
