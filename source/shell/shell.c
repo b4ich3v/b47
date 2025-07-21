@@ -61,8 +61,8 @@ int main()
 
         }
 
-        char* input = readline("\033[38;2;255;165;0mb47>\033[0m ");
-        
+        char* input = readline("\033[38;2;255;20;147mb47>\033[0m ");
+
         if (!input) 
         {
 
