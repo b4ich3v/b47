@@ -12,8 +12,6 @@
 - **User-Friendly Command History:** Leverages GNU Readline for smart history navigation and line editing.
 - **Advanced Expansion:** Handles variable expansions and command preprocessing to let you build complex commands intuitively.
 
-b47 isn’t just another shell — it’s a battle-tested toolkit for anyone who commands the terminal battlefield.
-
 ---
 
 ## Project Structure
