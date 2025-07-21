@@ -43,13 +43,36 @@
 
 ## Supported Syntax and Operators
 
-| Operator    | Description                                                             |
-|-------------|-------------------------------------------------------------------------|
-| `\|`         | Pipe: Passes output of one command as input to the next.                |
-| `&&`        | AND: Execute next command only if the previous succeeds.                |
-| `\|\|`        | OR: Execute next command only if the previous fails.                    |
-| `;`         | Sequence: Run commands sequentially, regardless of success.             |
-| `&`         | Background: Run command asynchronously without blocking the shell.      |
-| `()`        | Grouping: Combine multiple commands or pipelines into a single unit.    |
-| `<`, `>`, `>>`, `<<` | Redirection: Input from file, overwrite or append output, heredoc input. |
+| Operator           | Description                                                                                              |
+|--------------------|----------------------------------------------------------------------------------------------------------|
+| `\|`               | Pipe: Passes the standard output of one command as the standard input to the next.                        |
+| `&&`               | AND: Executes the following command only if the previous command exits successfully (exit status 0).    |
+| `\|\|`             | OR: Executes the following command only if the previous command fails (non-zero exit status).             |
+| `;`                | Sequence: Executes commands sequentially, regardless of the previous command’s result.                     |
+| `&`                | Background execution: Runs the preceding command asynchronously, returning control immediately to the shell. |
+| `()`               | Grouping: Groups commands or pipelines into a subshell, enabling combined redirections or logical operations. |
+| `<`, `>`, `>>`, `<<` | Redirections:                                                                                         |
+|                    | - `<` : Redirects input from a file to the command.                                                     |
+|                    | - `>` : Redirects output to a file, overwriting existing content.                                       |
+|                    | - `>>`: Redirects output to a file, appending to existing content.                                      |
+|                    | - `<<`: Heredoc: Takes multiline input until a delimiter line is found, feeding it to command input.   |
+| `$VAR`, `${VAR}`    | Variable expansion: Replaces variables with their current values in the environment.                    |
+| `~`                | Tilde expansion: Expands to the current user's home directory or another user’s home when followed by username. |
+| `"` and `'`        | Quoting:                                                                                               |
+|                    | - `"` (Double quotes): Expands variables and allows command substitution inside.                       |
+|                    | - `'` (Single quotes): Treats everything literally, no expansion or substitution.                      |
+| `\` (Backslash)    | Escape character: Escapes the next character, preventing its special interpretation.                   |
+| `$(...)`           | Command substitution: Executes the command inside and replaces the syntax with its output.             |
+| `` `...` ``        | Alternative command substitution syntax (deprecated but supported).                                   |
+| `jobs`             | Lists active background and stopped jobs.                                                            |
+| `fg`, `bg`         | Foreground/background job control commands to resume jobs in foreground or background.                |
+
+---
+
+### Additional Notes:
+
+- **Subshell Execution:** Using `()` creates a subshell environment, isolating variable changes and redirections inside the group.
+- **Command Chaining:** Combining operators allows complex flow control, e.g., `cmd1 && cmd2 || cmd3; cmd4 &`.
+- **Signal Handling:** The shell manages job control signals (e.g., SIGINT, SIGTSTP) to properly handle foreground and background tasks.
+- **History Expansion:** Integrated with GNU Readline, allowing use of `!` for recalling previous commands (if implemented).
 
