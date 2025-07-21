@@ -76,3 +76,16 @@
 - **Signal Handling:** The shell intercepts job control signals (e.g., `SIGINT`, `SIGTSTP`) and delegates them to child processes while preserving the shell's stability and responsiveness.
 - **History Expansion:** Integrated with GNU Readline, allowing use of `!` for recalling previous commands (if implemented).
 
+---
+
+<br><br>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="screenshots/screenshot1.png" alt="Image 1" width="1000"/>
+</div>
+<br><br>
+<br><br>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="screenshots/screenshot2.png" alt="Image 1" width="1000"/>
+</div>
+<br><br>
+
