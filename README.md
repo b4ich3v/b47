@@ -45,9 +45,9 @@
 
 | Operator    | Description                                                             |
 |-------------|-------------------------------------------------------------------------|
-| `|`         | Pipe: Passes output of one command as input to the next.                |
+| `\|`         | Pipe: Passes output of one command as input to the next.                |
 | `&&`        | AND: Execute next command only if the previous succeeds.                |
-| `||`        | OR: Execute next command only if the previous fails.                    |
+| `\|\|`        | OR: Execute next command only if the previous fails.                    |
 | `;`         | Sequence: Run commands sequentially, regardless of success.             |
 | `&`         | Background: Run command asynchronously without blocking the shell.      |
 | `()`        | Grouping: Combine multiple commands or pipelines into a single unit.    |
