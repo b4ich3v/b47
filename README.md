@@ -64,8 +64,8 @@
 | `\` (Backslash)    | Escape character: Escapes the next character, preventing its special interpretation.                   |
 | `$(...)`           | Command substitution: Executes the command inside and replaces the syntax with its output.             |
 | `` `...` ``        | Alternative command substitution syntax (deprecated but supported).                                   |
-| `jobs`             | Lists active background and stopped jobs.                                                            |
-| `fg`, `bg`         | Foreground/background job control commands to resume jobs in foreground or background.                |
+| `jobs`             | Built-in command: Lists active background and stopped jobs.                                                            |
+| `fg`, `bg`         | Built-in commands: Resume stopped jobs in the foreground or background respectively.                |
 
 ---
 
@@ -73,6 +73,6 @@
 
 - **Subshell Execution:** Using `()` creates a subshell environment, isolating variable changes and redirections inside the group.
 - **Command Chaining:** Combining operators allows complex flow control, e.g., `cmd1 && cmd2 || cmd3; cmd4 &`.
-- **Signal Handling:** The shell manages job control signals (e.g., SIGINT, SIGTSTP) to properly handle foreground and background tasks.
+- **Signal Handling:** The shell intercepts job control signals (e.g., SIGINT, SIGTSTP) and delegates them to child processes while preserving the shell's stability and responsiveness.
 - **History Expansion:** Integrated with GNU Readline, allowing use of `!` for recalling previous commands (if implemented).
 
