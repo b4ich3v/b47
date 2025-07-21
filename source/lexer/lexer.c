@@ -1,5 +1,6 @@
 #define MAX_TOKEN_LEN 256
 #define _POSIX_C_SOURCE 200809L
+
 #include <ctype.h>
 #include <string.h>
 
