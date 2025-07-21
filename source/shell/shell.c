@@ -1,5 +1,5 @@
-#define _GNU_SOURCE 
-#define RM_TOK(position)  do { arguments[position] = NULL; if (arguments[(position)+1]) arguments[(position) + 1] = NULL; } while(0)
+#define _GNU_SOURCE     
+
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
@@ -22,6 +22,14 @@
 #include "parser.h"
 #include "process.h"
 #include "variable.h"
+
+#define RM_TOK(position)                                  \
+    do {                                                  \
+        arguments[(position)] = NULL;                     \
+        if (arguments[(position) + 1])                    \
+            arguments[(position) + 1] = NULL;             \
+    } while (0)
+
 
 extern void collectHeredocs(node_t* node); 
 pid_t shell_pgid;
